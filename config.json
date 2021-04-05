@@ -1,0 +1,7 @@
+{
+    "project": "PROJECT_NAME", 
+    "organizaiton": "ORGANIZATION",
+    "pat": "PERSONAL_ACCESS_TOKEN",
+    "slackUrl": "SLACK_INCOMING_WEBHOOK_URL",       
+    "schedule": "0 10 9,13,16 ? * MON,TUE,WED,THU,FRI *"
+}
