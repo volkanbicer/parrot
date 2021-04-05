@@ -33,7 +33,8 @@ npm install
 npm run dev
 ```
 
-### Run on docker container
+### Dockerize
+
 ```
 make up
 ```

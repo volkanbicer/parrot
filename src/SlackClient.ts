@@ -21,6 +21,7 @@ export default class SlackClient {
     
 
     async post(pullRequests: PullRequestMessage[])  {
+        if (pullRequests.length == 0) return
         const message = SlackClient.createMessage(pullRequests)    
         console.log(message)    
         axios.post(config.slackUrl, {            
