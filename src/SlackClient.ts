@@ -1,6 +1,6 @@
-import * as config from "../config.json";
 import { PullRequestMessage } from "./Models/PullRequestMessage"
 import axios from "axios";
+import AppConfig from "./AppConfig";
 
 export default class SlackClient {
 
@@ -23,8 +23,8 @@ export default class SlackClient {
     async post(pullRequests: PullRequestMessage[])  {
         if (pullRequests.length == 0) return
         const message = SlackClient.createMessage(pullRequests)    
-        console.log(message)    
-        axios.post(config.slackUrl, {            
+        console.log('Date:', new Date(), message)    
+        axios.post(AppConfig.slackUrl, {            
         blocks: [
             {
             type: 'section',

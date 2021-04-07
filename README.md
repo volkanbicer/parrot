@@ -1,13 +1,13 @@
 # Parrot 
 
-Parrot is slack the pull request reminder for git repositories which are hosted on Azure Devops
+Parrot is the slack pull request reminder for git repositories which are hosted on Azure Devops
 
 
 
 
 ### Getting started
 
-Before you run please update `config.json` file 
+Before you run please update `config.json` file
 
 ```json
 {
@@ -15,7 +15,7 @@ Before you run please update `config.json` file
     "organizaiton": "ORGANIZATION",
     "pat": "PERSONAL_ACCESS_TOKEN",
     "slackUrl": "SLACK_INCOMING_WEBHOOK",       
-    "schedule": "0 10 9,13,16 ? * MON,TUE,WED,THU,FRI *"
+    "schedule": "10 6,12 * * 1-5"
 }
 ```
 
@@ -35,8 +35,14 @@ npm run dev
 
 ### Dockerize
 
+Run development container
 ```
 make up
+```
+
+Run production container
+```
+make up-prod
 ```
 
 ### Requirements

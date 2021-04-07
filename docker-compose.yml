@@ -8,8 +8,11 @@ services:
       target: base
     volumes:
       - ./src:/home/node/app/src
+      - ./config.json:/home/node/app/config.json
       - ./nodemon.json:/home/node/app/nodemon.json
     container_name: ts-node-docker
+    env_file:
+      - .env
     expose:
       - '4000'
     ports:
